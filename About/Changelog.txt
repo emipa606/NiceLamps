@@ -1,0 +1,4 @@
+# Changelog for NiceLamps
+
+1.4.0 - First publish
+
