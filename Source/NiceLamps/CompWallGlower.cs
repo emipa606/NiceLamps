@@ -100,7 +100,7 @@ public class CompWallGlower : ThingComp
 
     public void DespawnGlower()
     {
-        if (glower == null || !glower.Spawned)
+        if (glower is not { Spawned: true })
         {
             return;
         }
