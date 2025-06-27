@@ -4,13 +4,13 @@ using Verse;
 
 public class CompWallGlower : ThingComp
 {
-    public Thing glower;
+    private Thing glower;
 
     private bool glowOnInt;
 
-    public IntVec3 glowPos;
+    private IntVec3 glowPos;
 
-    public CompProperties_WallGlower Props => (CompProperties_WallGlower)props;
+    private CompProperties_WallGlower Props => (CompProperties_WallGlower)props;
 
     private bool ShouldBeLitNow
     {
@@ -72,7 +72,7 @@ public class CompWallGlower : ThingComp
         }
     }
 
-    public void UpdateLit()
+    private void updateLit()
     {
         var shouldBeLitNow = ShouldBeLitNow;
         if (glowOnInt == shouldBeLitNow)
@@ -83,22 +83,22 @@ public class CompWallGlower : ThingComp
         glowOnInt = shouldBeLitNow;
         if (!glowOnInt)
         {
-            DespawnGlower();
+            despawnGlower();
         }
         else
         {
-            SpawnGlower();
+            spawnGlower();
         }
     }
 
-    public void SpawnGlower()
+    private void spawnGlower()
     {
         glowPos = parent.Position + IntVec3.South.RotatedBy(parent.Rotation);
         glower = ThingMaker.MakeThing(ThingDef.Named(Props.glowerDefName));
         GenSpawn.Spawn(glower, glowPos, parent.Map, parent.Rotation);
     }
 
-    public void DespawnGlower()
+    private void despawnGlower()
     {
         if (glower is not { Spawned: true })
         {
@@ -129,7 +129,7 @@ public class CompWallGlower : ThingComp
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
-        UpdateLit();
+        updateLit();
     }
 
     public override void ReceiveCompSignal(string signal)
@@ -154,14 +154,14 @@ public class CompWallGlower : ThingComp
             case "MechClusterDefeated":
             case "Hackend":
             case "RitualTargetChanged":
-                UpdateLit();
+                updateLit();
                 break;
         }
     }
 
-    public override void PostDeSpawn(Map map)
+    public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
     {
-        base.PostDeSpawn(map);
-        UpdateLit();
+        base.PostDeSpawn(map, mode);
+        updateLit();
     }
 }

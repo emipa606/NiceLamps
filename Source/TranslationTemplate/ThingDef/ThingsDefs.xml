@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Cylindrical Lamp -->
+  <CylindricalLamp.label>Cylindrical Lamp</CylindricalLamp.label>
+  <!-- EN: A fine lamp providing comfortable lighting. -->
+  <CylindricalLamp.description>A fine lamp providing comfortable lighting.</CylindricalLamp.description>
+  <!-- EN: Globe Lamp -->
+  <GlobeLamp.label>Globe Lamp</GlobeLamp.label>
+  <!-- EN: A modernist lamp for the global citizen. -->
+  <GlobeLamp.description>A modernist lamp for the global citizen.</GlobeLamp.description>
+  <!-- EN: Metal Lamp -->
+  <MetalLamp.label>Metal Lamp</MetalLamp.label>
+  <!-- EN: A stylish standing lamp with an elegant feeling. -->
+  <MetalLamp.description>A stylish standing lamp with an elegant feeling.</MetalLamp.description>
+  <!-- EN: String Lights -->
+  <StringLights.label>String Lights</StringLights.label>
+  <!-- EN: A set of wall-mountable string lights. -->
+  <StringLights.description>A set of wall-mountable string lights.</StringLights.description>
+  <!-- EN: UNUSED -->
+  <StringLights_WallGlower.label>UNUSED</StringLights_WallGlower.label>
+  <!-- EN: UNUSED -->
+  <StringLights_WallGlower.description>UNUSED</StringLights_WallGlower.description>
+  <!-- EN: Umbrella Lamp -->
+  <UmbrellaLamp.label>Umbrella Lamp</UmbrellaLamp.label>
+  <!-- EN: A classical lamp for cozy environments. -->
+  <UmbrellaLamp.description>A classical lamp for cozy environments.</UmbrellaLamp.description>
+</LanguageData>
